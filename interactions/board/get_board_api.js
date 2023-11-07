@@ -5,8 +5,8 @@ const Board = require("../../db/models/boardSchema");
 const getBoard = async (req, res) => {
     try{
       const boards = await Board.find();
-      // res.status(200).json({boards});
-      return res.send(boards)
+      console.log(boards)
+      res.status(200).json({boards});
     }
     catch{
       err=>{

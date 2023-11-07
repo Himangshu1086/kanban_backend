@@ -22,6 +22,9 @@ app.use(boardItem);
 app.use(columnItem);
 
  
+app.get('/', (req,res)=>{
+  res.send("Backend for Kanban App")
+})
 
 app.listen(PORT, () => {
   console.log(`server connected IN PORT ${PORT}`);
