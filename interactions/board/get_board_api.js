@@ -6,7 +6,7 @@ const getBoard = async (req, res) => {
     try{
       const boards = await Board.find();
       // res.status(200).json({boards});
-      res.send(boards)
+      return res.send(boards)
     }
     catch{
       err=>{
